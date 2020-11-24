@@ -12,6 +12,7 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/tacosontitan/Luna.Commands.Public</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <PackageId>LunaBot.Commands.Public</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
