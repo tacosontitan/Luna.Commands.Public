@@ -9,6 +9,7 @@ namespace Luna.Commands.Public.Samples {
 
         #region Constructors
 
+
         /// <summary>
         /// Creates a new instance of the hello world command using the key `samples.hello-world`.
         /// </summary>

@@ -1,5 +1,5 @@
 ﻿namespace Luna.Commands.Public {
-    public static class PrefabMessages {
+    public sealed class PrefabMessages {
 
         /// <summary>
         /// The standard error message to return from the Work method of a command not supported outside of Discord.
