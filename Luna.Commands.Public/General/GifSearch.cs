@@ -27,7 +27,7 @@ namespace Luna.Commands.Public.Imagery {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) => PrefabMessages.NotSupportedOutsideOfDiscord;
+        protected override string Work(object[] parameters) => Prefabs.NotSupportedOutsideOfDiscord;
         /// <summary>
         /// Executes the core work of the command and builds an embed object for Discord to consume.
         /// </summary>

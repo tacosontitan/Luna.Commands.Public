@@ -70,7 +70,7 @@ namespace Luna.Commands.Public.Lounge {
             flavorDescription = flavorDescription.Replace("<FINAL_INDEX>", " and ");
 
             if (string.IsNullOrWhiteSpace(flavorDescription))
-                return $"<@USER_MENTION@>, here's {RandomHelper.GetRandomValue(_modifiers)} {flavorDescription} {DisplayName} for you! {DrinkEmote} {CustomMessage}".Trim();
+                return $"{Prefabs.UserMentionPlaceholder}, here's {RandomHelper.GetRandomValue(_modifiers)} {flavorDescription} {DisplayName} for you! {DrinkEmote} {CustomMessage}".Trim();
 
             return "We don't serve the flavor you requested. If you need a list of available flavors you can request it with the `!lounge.flavors` command.";
         }
