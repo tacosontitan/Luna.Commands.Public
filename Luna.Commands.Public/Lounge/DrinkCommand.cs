@@ -58,9 +58,10 @@ namespace Luna.Commands.Public.Lounge {
         /// <returns>A message to respond to the user with.</returns>
         protected override string Work(object[] parameters) {
             List<string> validFlavors = new List<string>();
-            foreach (var param in parameters)
-                if (FlavorMachine.Flavors.Any(a => a.Equals(param.ToString(), StringComparison.InvariantCultureIgnoreCase)))
-                    validFlavors.Add(param.ToString());
+            if (parameters != null)
+                foreach (var param in parameters)
+                    if (FlavorMachine.Flavors.Any(a => a.Equals(param.ToString(), StringComparison.InvariantCultureIgnoreCase)))
+                        validFlavors.Add(param.ToString());
 
             if (validFlavors.Count < 1)
                 validFlavors.Add(RandomHelper.GetRandomValue(FlavorMachine.Flavors));

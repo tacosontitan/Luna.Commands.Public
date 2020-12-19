@@ -13,10 +13,11 @@
     <RepositoryUrl>https://github.com/tacosontitan/Luna.Commands.Public</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageId>LunaBot.Commands.Public</PackageId>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
-    <Version>1.1.0</Version>
-    <PackageReleaseNotes>1.1.0: Addition of basic drink commands.
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
+    <FileVersion>1.1.1.0</FileVersion>
+    <Version>1.1.1</Version>
+    <PackageReleaseNotes>1.1.1: Repaired fatal bug with drink commands caused by lack of parameters.
+1.1.0: Addition of basic drink commands.
 1.0.0: Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
