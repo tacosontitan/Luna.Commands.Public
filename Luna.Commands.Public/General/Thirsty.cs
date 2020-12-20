@@ -16,11 +16,11 @@ namespace Luna.Commands.Public.Informational {
 
         #region Protected Methods
 
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             Dictionary<string, object> drinkData = GetRandomDrink();
             return $"You should drink a {drinkData["strDrink"]}.";
         }
-        protected override Embed WorkEmbed(object[] parameters) {
+        protected override Embed WorkEmbed(LunarUser sender, object[] parameters) {
             Dictionary<string, object> drinkData = GetRandomDrink();
 
             List<string> ingredients = new List<string>();

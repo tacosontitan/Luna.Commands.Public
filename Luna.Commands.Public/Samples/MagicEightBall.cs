@@ -72,7 +72,7 @@ namespace Luna.Commands.Public.Samples {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             // In this sample, the user will ask us a question.
             // We don't really care what the question is.
             // We just need to return a random answer.

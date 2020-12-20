@@ -13,16 +13,18 @@
     <RepositoryUrl>https://github.com/tacosontitan/Luna.Commands.Public</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageId>LunaBot.Commands.Public</PackageId>
-    <AssemblyVersion>1.1.1.0</AssemblyVersion>
-    <FileVersion>1.1.1.0</FileVersion>
-    <Version>1.1.1</Version>
-    <PackageReleaseNotes>1.1.1: Repaired fatal bug with drink commands caused by lack of parameters.
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <Version>1.2.0</Version>
+    <PackageReleaseNotes>1.2.0: Updated code base to support Luna.Core v 1.0.4.
+1.1.2: Removed flavor selection from drink commands for the time being.
+1.1.1: Repaired fatal bug with drink commands caused by lack of parameters.
 1.1.0: Addition of basic drink commands.
 1.0.0: Initial Release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LunaBot.Core" Version="1.0.1" />
+    <PackageReference Include="LunaBot.Core" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

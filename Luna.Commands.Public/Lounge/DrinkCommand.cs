@@ -56,24 +56,22 @@ namespace Luna.Commands.Public.Lounge {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
-            List<string> validFlavors = new List<string>();
-            if (parameters != null)
-                foreach (var param in parameters)
-                    if (FlavorMachine.Flavors.Any(a => a.Equals(param.ToString(), StringComparison.InvariantCultureIgnoreCase)))
-                        validFlavors.Add(param.ToString());
+        protected override string Work(LunarUser sender, object[] parameters) {
+            //List<string> validFlavors = new List<string>();
+            //if (parameters != null)
+            //    foreach (var param in parameters)
+            //        if (FlavorMachine.Flavors.Any(a => a.Equals(param.ToString(), StringComparison.InvariantCultureIgnoreCase)))
+            //            validFlavors.Add(param.ToString());
 
-            if (validFlavors.Count < 1)
-                validFlavors.Add(RandomHelper.GetRandomValue(FlavorMachine.Flavors));
+            //if (validFlavors.Count < 1)
+            //    validFlavors.Add(RandomHelper.GetRandomValue(FlavorMachine.Flavors));
 
-            string flavorDescription = string.Join(", ", validFlavors);
-            flavorDescription = flavorDescription.Insert(flavorDescription.LastIndexOf(", "), "<FINAL_INDEX>");
-            flavorDescription = flavorDescription.Replace("<FINAL_INDEX>", " and ");
+            //string flavorDescription = string.Join(", ", validFlavors);
+            //flavorDescription = flavorDescription.Insert(flavorDescription.LastIndexOf(", "), "<FINAL_INDEX>");
+            //flavorDescription = flavorDescription.Replace("<FINAL_INDEX>", " and ");
 
-            if (string.IsNullOrWhiteSpace(flavorDescription))
-                return $"{Prefabs.UserMentionPlaceholder}, here's {RandomHelper.GetRandomValue(_modifiers)} {flavorDescription} {DisplayName} for you! {DrinkEmote} {CustomMessage}".Trim();
-
-            return "We don't serve the flavor you requested. If you need a list of available flavors you can request it with the `!lounge.flavors` command.";
+            return $"{Prefabs.UserMentionPlaceholder}, here's {RandomHelper.GetRandomValue(_modifiers)} {DisplayName} for you! {DrinkEmote} {CustomMessage}".Trim();
+            //return "We don't serve the flavor you requested. If you need a list of available flavors you can request it with the `!lounge.flavors` command.";
         }
 
         #endregion

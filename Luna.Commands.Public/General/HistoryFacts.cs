@@ -25,7 +25,7 @@ namespace Luna.Commands.Public.Informational {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) => $"On this day in history: {GetRandomHistoryFact()}";
+        protected override string Work(LunarUser sender, object[] parameters) => $"On this day in history: {GetRandomHistoryFact()}";
 
         #endregion
 

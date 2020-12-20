@@ -38,7 +38,7 @@ namespace Luna.Commands.Public.Games {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             int result = _random.Next(1, 12000);
             if (result <= 5999)
                 return "Heads.";

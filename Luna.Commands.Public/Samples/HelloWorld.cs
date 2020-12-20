@@ -25,10 +25,10 @@ namespace Luna.Commands.Public.Samples {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             // In this sample, we don't require any parameters.
             // We're simply going to say hello.
-            return "Hello World";
+            return "Hello World!";
         }
 
         #endregion

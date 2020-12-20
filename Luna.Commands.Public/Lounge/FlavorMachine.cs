@@ -59,7 +59,7 @@ namespace Luna.Commands.Public.Lounge {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) => RandomHelper.GetRandomValue(Flavors);
+        protected override string Work(LunarUser sender, object[] parameters) => RandomHelper.GetRandomValue(Flavors);
 
         #endregion
 

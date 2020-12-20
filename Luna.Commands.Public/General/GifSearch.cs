@@ -27,13 +27,13 @@ namespace Luna.Commands.Public.Imagery {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) => Prefabs.NotSupportedOutsideOfDiscord;
+        protected override string Work(LunarUser sender, object[] parameters) => Prefabs.NotSupportedOutsideOfDiscord;
         /// <summary>
         /// Executes the core work of the command and builds an embed object for Discord to consume.
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>An embed object for Discord consumption.</returns>
-        protected override Embed WorkEmbed(object[] parameters) {
+        protected override Embed WorkEmbed(LunarUser sender, object[] parameters) {
             try {
                 if (parameters.Length > 0) {
                     string searchTerm = parameters[0].ToString();

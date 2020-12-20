@@ -2,7 +2,7 @@
     public sealed class Coffee : DrinkCommand {
         public Coffee() : base("Coffee", "coffee", false) {
             DrinkEmote = "☕";
-            CustomMessage = "Piping hot and gently stired.";
+            CustomMessage = "Piping hot and gently stirred.";
         }
     }
 }

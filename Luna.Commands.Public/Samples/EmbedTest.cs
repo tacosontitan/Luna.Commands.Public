@@ -32,13 +32,13 @@ namespace Luna.Commands.Public.Samples {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) => _responseMessage;
+        protected override string Work(LunarUser sender, object[] parameters) => _responseMessage;
         /// <summary>
         /// Executes the core work of the command and builds an embed object for Discord to consume.
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>An embed object for Discord consumption.</returns>
-        protected override Embed WorkEmbed(object[] parameters) {
+        protected override Embed WorkEmbed(LunarUser sender, object[] parameters) {
             EmbedBuilder embedBuilder = new EmbedBuilder();
             embedBuilder.Description = _responseMessage;
             embedBuilder.Color = Color.Purple;

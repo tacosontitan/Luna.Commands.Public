@@ -22,11 +22,11 @@ namespace Luna.Commands.Public.Health {
 
         #region Protected Methods
 
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             Dictionary<string, double> globalStats = GetCovidSummary();
             return $@"There are {globalStats["NewConfirmed"].ToString("N")} new cases out of {globalStats["TotalConfirmed"].ToString("N")} total. There are {globalStats["NewDeaths"].ToString("N")} new cases out of {globalStats["TotalDeaths"].ToString("N")} total. There are {globalStats["NewRecovered"].ToString("N")} new cases out of {globalStats["TotalRecovered"].ToString("N")} total. - Data sourced from COVID-19 API.";
         }
-        protected override Embed WorkEmbed(object[] parameters) {
+        protected override Embed WorkEmbed(LunarUser sender, object[] parameters) {
             Dictionary<string, double> globalStats = GetCovidSummary();
             EmbedAuthorBuilder authorBuilder = new EmbedAuthorBuilder();
             authorBuilder.Name = "Global COVID-19 Statistics";

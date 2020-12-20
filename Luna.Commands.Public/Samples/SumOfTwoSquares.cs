@@ -24,7 +24,7 @@ namespace Luna.Commands.Public.Samples {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             // In this sample, we're going to square and sum two parameters.
             // This sample only supports two parameters, no more, no less.
             if (parameters.Length != 2)

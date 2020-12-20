@@ -24,7 +24,7 @@ namespace Luna.Commands.Public.Samples {
         /// </summary>
         /// <param name="parameters">Any required parameters for this command.</param>
         /// <returns>A message to respond to the user with.</returns>
-        protected override string Work(object[] parameters) {
+        protected override string Work(LunarUser sender, object[] parameters) {
             // In this sample, we want to simply return what the user supplied.
             if (parameters.Length >= 1)
                 return string.Join(" ", parameters);
